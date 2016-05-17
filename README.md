@@ -21,7 +21,19 @@ There are several systems that are needed to fully activate an account, though h
 2. Kitab:
 * Add user to jem5_users table
 * For password, do: 
+
+`echo -n <password><salt> | md5sum`
+
+So, if the password is `Vurcyied` and the salt is `Ibzocmash`, do:
+
+`echo -n VurcyiedIbzocmash | md5sum`
+
+Then insert like this:
+
+INSERT INTO `jem5_users` (`id`, `name`, `username`, `email`, `password`) VALUES (NULL, 'Test User', 'tuser', 'test.user@example.com', 'b43ddc9ff084753b0f502e6f0fcce976:Ibzocmash');
+
 * Add usergroups: 11, 32
+
 3. Forums:
 * Add user to appropriate category
 
