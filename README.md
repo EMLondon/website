@@ -34,7 +34,17 @@ INSERT INTO `jem5_users` (`id`, `name`, `username`, `email`, `password`) VALUES 
 
 * Add usergroups: 11, 32
 
+* Add to `jem5_comprofiler`
+
 3. Forums:
+* Create user:
+
+```
+rails c
+u = User.create!(username: "name", email: "name@email.com", password: "password")
+u.activate
+```
+
 * Add user to appropriate category
 
 
