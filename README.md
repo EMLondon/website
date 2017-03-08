@@ -32,7 +32,13 @@ Then insert like this:
 
 INSERT INTO `jem5_users` (`id`, `name`, `username`, `email`, `password`, `params`) VALUES (NULL, 'Test User', 'tuser', 'test.user@example.com', 'b43ddc9ff084753b0f502e6f0fcce976:Ibzocmash', '');
 
-* Add usergroups: 11, 32 (for staff)
+* Add user to usergroups: 
+
+For consultants: 
+11, 32
+
+For admin staff:
+INSERT INTO `eml`.`jem5_user_usergroup_map` (`user_id`, `group_id`) VALUES (<user_id>', '16')
 
 * Add user to `jem5_comprofiler`
 
