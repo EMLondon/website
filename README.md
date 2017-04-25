@@ -35,12 +35,14 @@ INSERT INTO `jem5_users` (`id`, `name`, `username`, `email`, `password`, `params
 * Add user to usergroups: 
 
 For consultants: 
-11, 32
+INSERT INTO `eml`.`jem5_user_usergroup_map` (`user_id`, `group_id`) VALUES ('<user_id>', '11');
+INSERT INTO `eml`.`jem5_user_usergroup_map` (`user_id`, `group_id`) VALUES ('<user_id>', '32');
 
 For admin staff:
-INSERT INTO `eml`.`jem5_user_usergroup_map` (`user_id`, `group_id`) VALUES (<user_id>', '16')
+INSERT INTO `eml`.`jem5_user_usergroup_map` (`user_id`, `group_id`) VALUES ('<user_id>', '16');
 
 * Add user to `jem5_comprofiler`
+INSERT INTO `eml`.`jem5_comprofiler` (`id`, `user_id`, `firstname`, `lastname`, `cb_displayname`) VALUES ('<user_id>', '<user_id>', '<first>', '<last>', '<display_name>');
 
 3. Forums:
 * Create user:
