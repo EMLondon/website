@@ -42,12 +42,19 @@ For admin staff:
 INSERT INTO `eml`.`jem5_user_usergroup_map` (`user_id`, `group_id`) VALUES ('<user_id>', '16');
 
 * Add user to `jem5_comprofiler`
+
 INSERT INTO `eml`.`jem5_comprofiler` (`id`, `user_id`, `firstname`, `lastname`, `cb_displayname`) VALUES ('<user_id>', '<user_id>', '<first>', '<last>', '<display_name>');
 
-3. Forums:
+You can make most of this happen with this extension:
+
+http://extensions.openoffice.org/en/project/cryptographic-hash-functions-uno-component-openofficeorg#sthash.42nVdsJE.dpuf
+
+==Forums==
 * Create user:
 
 ```
+cd /discourse
+sudo ./launcher enter app
 rails c
 u = User.create!(username: "name", email: "name@email.com", password: "password")
 u.activate
