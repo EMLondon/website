@@ -49,7 +49,7 @@ You can make most of this happen with this extension:
 
 http://extensions.openoffice.org/en/project/cryptographic-hash-functions-uno-component-openofficeorg#sthash.42nVdsJE.dpuf
 
-==Forums==
+# Forums
 * Create user:
 
 ```
